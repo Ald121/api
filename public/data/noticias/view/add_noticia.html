@@ -1,0 +1,63 @@
+<div class="jumbotron text-center">
+	<h1>+ Noticia</h1>
+ <form name="frmEmployees" class="form-horizontal" novalidate="">
+
+                                <div class="form-group error">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">Título</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control has-error" id="name" name="name" placeholder="Título" value="{{name}}" 
+                                        ng-model="employee.name" ng-required="true">
+                                        <span class="help-inline" 
+                                        ng-show="frmEmployees.name.$invalid && frmEmployees.name.$touched">Obligatorio</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">Descripción</label>
+                                    <div class="col-sm-9">
+                                    <textarea rows="4" cols="50" class="form-control" id="email" name="email" placeholder="Descripción" value="{{email}}" 
+                                        ng-model="employee.email" ng-required="true">
+</textarea>
+                                        <span class="help-inline" 
+                                        ng-show="frmEmployees.email.$invalid && frmEmployees.email.$touched">Obligatorio</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">URL</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="contact_number" name="contact_number" placeholder="URL" value="{{contact_number}}" 
+                                        ng-model="employee.contact_number" ng-required="true">
+                                    <span class="help-inline" 
+                                        ng-show="frmEmployees.contact_number.$invalid && frmEmployees.contact_number.$touched">Obligatorio</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">Referencia</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" class="form-control" id="position" name="position" placeholder="Referencia" value="{{position}}" 
+                                        ng-model="employee.position" ng-required="true">
+                                    <span class="help-inline" 
+                                        ng-show="frmEmployees.position.$invalid && frmEmployees.position.$touched">Obligatorio</span>
+                                    </div>
+                                </div>
+
+<div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-3 control-label">Imagen</label>
+                                    <div class="col-sm-9">
+                                        <input type="file" class="form-control" id="img" name="img" placeholder="Imagen" accept="image/x-png, image/gif, image/jpeg"
+                                        ng-model="employee.img" ng-required="true">
+                                        <span data-ng-show="frmEmployees.img.$error.required && frmEmployees.img.$touched">The Photo is required field.</span>
+                                  
+                                </div>
+
+                                <div class="form-group">
+                                <div class="col-sm-10"></div>
+                                    <div class="col-sm-2">
+                                      <button type="button" class="btn btn-primary" id="btn-save" ng-click="save(modalstate, id)" ng-disabled="frmEmployees.$invalid">Guardar</button>
+                                </div>
+                            </form>
+
+
+</div>
