@@ -15,7 +15,7 @@ Route::get('/', function () {
 });
 
 
-Route::get('/api/v1/noticias/{id?}', 'Noticias@index');
-Route::post('/api/v1/noticias', 'Noticias@store');
-Route::post('/api/v1/noticias/{id}', 'Noticias@update');
-Route::delete('/api/v1/noticias/{id}', 'Noticias@destroy');
+Route::resource('noticias', 'Noticias');
+// Route::post('/api/v1/noticias', 'Noticias@store');
+// Route::post('/api/v1/noticias/{id}', 'Noticias@update');
+// Route::delete('/api/v1/noticias/{id}', 'Noticias@destroy');
